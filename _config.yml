@@ -1,0 +1,23 @@
+# Site settings
+title: Adrien Ball
+description: "Machine learning engineer. Rust and Python enthusiast. Sci-fi reader."
+baseurl: /
+url: "http://adrienball.github.io"
+paginate: 5
+
+# User settings
+username: adrienball
+user_title: Adrien Ball - ML Engineer
+twitter_username: adrien_ball
+github_username:  adrienball
+linkedin_username: adrienball
+medium_username: adrien_ball
+github:
+  repo: https://github.com/adrienball/adrienball.github.io
+
+# Build settings
+markdown: kramdown
+highlighter: pygments
+plugins:
+  - jekyll-feed
+permalink: pretty

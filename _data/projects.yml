@@ -1,0 +1,3 @@
+- name: Snips NLU
+  description: A Python library to extract intent and slots from text written in natural language.
+  github: https://github.com/snipsco/snips-nlu
