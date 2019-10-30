@@ -290,3 +290,14 @@ img.screenshot {
   top:1px;
 }
 
+#images{
+    text-align:center;
+    margin:50px auto; 
+    font-size: 14px;
+}
+#images a{
+    margin:0px 20px;
+    display:inline-block;
+    text-decoration:none;
+    color:black;
+ }
