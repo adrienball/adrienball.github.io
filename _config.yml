@@ -1,8 +1,8 @@
 # Site settings
 title: Adrien Ball
 description: "Machine learning engineer. Rust and Python enthusiast. Sci-fi reader."
-baseurl: /
 url: "http://adrienball.github.io"
+baseurl: /
 paginate: 5
 
 # User settings
