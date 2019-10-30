@@ -17,7 +17,7 @@ github:
 
 # Build settings
 markdown: kramdown
-highlighter: pygments
+highlighter: rouge
 plugins:
   - jekyll-feed
 permalink: pretty

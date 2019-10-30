@@ -1,4 +1,10 @@
 - title: Podcast.__init__ interview
   url: https://www.pythonpodcast.com/snips-voice-assistant-episode-211/
-  description: Building A Privacy Preserving Voice Assistant
-  date: "2019-08-01"
+  description: I was interviewed by Tobias Macey, who hosts the Podcast.__init__ python podcast, to talk about what it means to build a privacy preserving voice assistant.
+  date: "2019-05-13"
+- title: Experiences from going open source
+  url: https://www.slideshare.net/AdrienBall/experiences-from-going-open-source
+  description: >-
+    This presentation was delivered by Adrien Ball at the Open Science in Practice (OSIP) summer school at EPFL Lausanne on September 2019 (<a href="http://osip2019.epfl.ch">osip2019.epfl.ch</a>).
+    It presents some lessons that were learned in the process of open sourcing the Snips NLU python library.
+  date: "2019-09-05"
