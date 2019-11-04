@@ -21,3 +21,7 @@ highlighter: rouge
 plugins:
   - jekyll-feed
 permalink: pretty
+
+# Analytics
+google_analytics:
+  tracking_id: UA-151467658-1
