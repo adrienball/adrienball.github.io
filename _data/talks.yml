@@ -5,6 +5,6 @@
 - title: Experiences from going open source
   url: https://www.slideshare.net/AdrienBall/experiences-from-going-open-source
   description: >-
-    This presentation was delivered by Adrien Ball at the Open Science in Practice (OSIP) summer school at EPFL Lausanne on September 2019 (<a href="http://osip2019.epfl.ch">osip2019.epfl.ch</a>).
-    It presents some lessons that were learned in the process of open sourcing the Snips NLU python library.
+    I made this presentation at the Open Science in Practice (OSIP) summer school at EPFL Lausanne on September 2019 (<a href="http://osip2019.epfl.ch">osip2019.epfl.ch</a>).
+    It presents some of the important things I have learned in the process of open sourcing the Snips NLU python library.
   date: "2019-09-05"
