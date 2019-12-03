@@ -10,7 +10,7 @@ My current focus is on building machine learning systems. I have a background in
 
 I have always enjoyed gaining autonomy in my work and this drives me each day a bit closer to a full-stack profile, even though my main passion remains machine learning. My curiosity and eagerness to learn are the key factors in the choices I make in my life.
 
-Currently, I'm working at [snips.ai](https://snips.ai) where I have been developping [Snips NLU](https://github.com/snipsco/snips-nlu), the open source Natural Language Understanding (NLU) engine which powers the Snips Voice platform.
+I recently joined [Sonos](https://www.sonos.com/) as part of the [recent acquisition of snips.ai](https://investors.sonos.com/news-and-events/investor-news/latest-news/2019/Sonos-Announces-Acquisition-of-Snips/default.aspx) where I had been working so far.
 
 ### Things I love
 Rust, Python, open source code, indie games, riddles, beautiful science, gifs
