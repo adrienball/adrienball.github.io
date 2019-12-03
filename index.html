@@ -30,6 +30,31 @@ title: Home
   {% endfor %}
 </table>
 
+<!-- Publications -->
+<h2>Publications</h2>
+{% for publication in site.data.publications  %}
+    {% capture this_year %}{{ publication.date | date: "%Y" }}{% endcapture %}
+    {% capture next_year %}{{ publication.previous.date | date: "%Y" }}{% endcapture %}
+
+    {% if forloop.first %}
+    <h3 id="{{ this_year }}-ref">{{this_year}}</h3>
+    <ul>
+    {% endif %}
+
+    <li><a href="{{ publication.url }}">{{ publication.title }}</a></li>
+    {% if publication.description %} {{publication.description}} {% endif %}
+
+    {% if forloop.last %}
+    </ul>
+    {% else %}
+        {% if this_year != next_year %}
+        </ul>
+        <h3 id="{{ next_year }}-ref">{{next_year}}</h3>
+        <ul>
+        {% endif %}
+    {% endif %}
+{% endfor %}
+
 <!-- Talks -->
 <h2>Talks</h2>
 {% for talk in site.data.talks  %}
