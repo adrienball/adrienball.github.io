@@ -1,5 +1,5 @@
 ---
-title: Get rid of mobile ads with a raspberry pi zero and pihole
+title: Get rid of mobile ads with a Raspberry Pi Zero and Pi-hole
 layout: post
 excerpt: Many people use an ad-blocker when they are browsing the web on their laptop. That does the job pretty efficiently. However, we are powerless when it comes to blocking ads on our smartphone.
 ---
