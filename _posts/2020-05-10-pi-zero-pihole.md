@@ -1,13 +1,8 @@
 ---
 title: Get rid of mobile ads with a raspberry pi zero and pihole
 layout: post
+excerpt: Many people use an ad-blocker when they are browsing the web on their laptop. That does the job pretty efficiently. However, we are powerless when it comes to blocking ads on our smartphone.
 ---
-
-<!-- You can extract all of the variables in use from a Smarty template using a simple call to `*nix` grep with a trivial regex expression. Here is the command-
-
-{% highlight bash %}
-grep -o "\{\$[-_a-zA-Z0-9]*\}" my-template.tpl
-{% endhighlight %} -->
 
 ## Online Advertising
 
@@ -39,10 +34,10 @@ Yes there is, and a simple solution is to use [Pi-hole](https://pi-hole.net/).
 
 ## Pi-hole
 
-When you browse the web or when one of your mobile apps interact with a remote server, your mobile asks a DNS server to resolve domain names (like adrienball.fr) to actual IP addresses, because in the end that's what is required to identify a machine on the internet.<br>
-To do that, DNS servers store some sort of big tables which map domain names to IP addresses. If you try to access an unknown website, the DNS server won't find any entry in its tables and will return an NXDomain ("Non-Existent Domain") response or a blank HTML page.
+When you browse the web or when one of your mobile apps interacts with a remote server, your mobile asks a DNS server to resolve domain names (like adrienball.fr) to actual IP addresses, because in the end that's what is required to identify a machine on the internet.<br>
+To do that, DNS servers store some sort of big tables which map domain names to IP addresses. If you try to access an unknown website, the DNS server won't find any entry in its tables and will return an NXDomain ("Non-Existent Domain") response.
 
-Let's say you run your own DNS server on your local network, and this server keeps a blacklist of domain names that you know are associated with advertising or analytics requests. Now, let's say that this DNS server returns NXDomain responses to all requests corresponding to blacklisted domain names, and just forwards all the other requests to a standard DNS server, like the one you have been using so far without being aware of it.
+Let's say you run your own DNS server on your local network, and this server keeps a blacklist of domain names that are known to correspond to advertising or analytics requests. Now, let's say that this DNS server returns NXDomain responses<sup>1</sup> to all requests corresponding to blacklisted domain names, and just forwards all the other requests to a standard DNS server, like the one you have been using so far without being aware of it.
 
 Now let's say you tell your smartphone, or any device you use at home, to use this DNS server instead of the one it's currently using.
 
@@ -91,3 +86,7 @@ This feels good. I love how Jacob Salmela described this magical moment in [the 
 An interesting feature of Pi-hole is the dashboard it provides. It shows stats on all the domains being queried on your network. That's a great tool to investigate your apps, and distinguish the bad guys from the good guys.
 
 Happy hacking!
+
+<div class="footnotes">
+    <sup>1</sup> In its default configuration, Pi-hole returns HTML blank page instead of NXDomain in such cases. There are some advantages and inconvenients to both, see <a href="https://pi-hole.net/2018/05/18/nxdomain-and-null-blocking-with-ftldns/#page-content">more details here</a>.
+</div>
