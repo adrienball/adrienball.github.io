@@ -50,12 +50,14 @@ Even though the Raspberry Pi was at the center of the project at its beginning, 
 
 At the time I discovered Pi-hole, I had some DIY kit at home which included a [Raspberry Pi Zero](https://www.raspberrypi.org/products/raspberry-pi-zero/). This device is the smallest of its family, literally.
 
-// Insert Image of Pi Zero here
-// Caption: 
+<div id="images">
+    <img src="/public/images/pi-zero.jpg">
+    <div class="caption">The tiny Raspberry Pi Zero</div>
+</div>
 
-It's also the cheapest one as it costs only 10$ ! Actually, the initial Rasperry Pi Zero was originally released at the price 5$, but this version did not include Wi-Fi and Bluetooth capabilities.
+It's also the cheapest one as it costs only 10$ ! Actually, the initial Rasperry Pi Zero was originally released at the price of 5$, but this version did not include WiFi and Bluetooth capabilities.
 
-On the other side, one can struggle to find an interesting way to use it given its limited power.
+On the other side, one can struggle to find an interesting way to leverage it given its limited power.
 
 Well, running Pi-hole on a Pi Zero proved to be one of the best use cases I could think of.
 I was initially concerned about performance but after several weeks relying on it, I can't see any performance decrease.
@@ -69,12 +71,11 @@ That's it, the Pi-hole DNS server is running on your Pi Zero. But now you need t
 - configure your router so that it uses the Pi Zero as its DNS server
 - do not change your router configuration, and instead manually set the DNS server on your smartphone
 
-The advantage of the first option is that you will benefit from Pi-hole as soon as you are connected to the network. That may or may not be what you want depending on the situation.
-The inconvenient is that, if for some reason you want to deactivate Pi-hole, you will have to change your router configuration.
+The advantage of the first option is that anyone will benefit from Pi-hole as soon as they are connected to your local network. That may or may not be what you want depending on the situation.
 
-I went for the second option and change the DNS used by my iPhone when connected to the WiFi. This way, I can quickly deactivate Pi-Hole just by turning off the WiFi and switching to cellular.<br>
+I went for the second option and [changed the DNS used by my iPhone](https://www.ghacks.net/2019/06/28/how-to-configure-the-dns-in-ios/) when connected to the WiFi. This way, it doesn't affect any other device in my home and anyone connected to the network can decide individually whether he's into Pi-hole or not. I can still quickly deactivate Pi-Hole just by turning off the WiFi and falling back to cellular.<br>
 I chose this option because I anticipated that some apps or websites may not behave properly if they can't reach their ad / analytics server.<br>
-It turns out I haven't had any such issue so far but still, I like the ability to switch off this DNS server.
+It turns out I haven't had any such issue so far but still, I prefer to let each device make its own choice.
 
 Now that you have setup the DNS server on your mobile, the ads are ... gone! No more ads anywhere on your mobile! Don't look for them, they aren't there anymore :)
 
@@ -84,6 +85,17 @@ This feels good. I love how Jacob Salmela described this magical moment in [the 
 
 
 An interesting feature of Pi-hole is the dashboard it provides. It shows stats on all the domains being queried on your network. That's a great tool to investigate your apps, and distinguish the bad guys from the good guys.
+
+<div id="images">
+    <img src="/public/images/pi-hole-query-logs.png">
+    <div class="caption">DNS query logs</div>
+</div>
+<div id="images">
+    <img src="/public/images/pi-hole-history-chart.png">
+    <div class="caption">DNS queries over time</div>
+</div>
+
+Remember that all this is powered by this 65mm long tiny device. Isn't it wonderful ?
 
 Happy hacking!
 
