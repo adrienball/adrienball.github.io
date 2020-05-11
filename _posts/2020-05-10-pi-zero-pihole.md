@@ -1,5 +1,5 @@
 ---
-title: How to get rid of mobile ads with a raspberry pi zero and pihole
+title: Get rid of mobile ads with a raspberry pi zero and pihole
 layout: post
 ---
 
@@ -9,7 +9,7 @@ layout: post
 grep -o "\{\$[-_a-zA-Z0-9]*\}" my-template.tpl
 {% endhighlight %} -->
 
-## The background story
+## Online Advertising
 
 I hate ads.
 
@@ -27,11 +27,11 @@ Nobody.
 
 Many people, like me, use an ad-blocker when they are browsing the web on their laptop. That does the job pretty efficiently.<br>
 However, we are powerless when it comes to blocking ads on our smartphone. 
-On iOS, Safari lets you use a [third-party ad-blocking app](https://www.lifewire.com/hate-ads-block-safari-iphone-2000778), called a content blocker. <br>I'm not using Safari, but anyway this will not block in-app ads which are by far the most annoying ones. Think about the flash screen that you see sometimes for several seconds when you launch an app, or this video that will pop up once in a while. Not only is this annoying but it also slows down the apps.
+On iOS, Safari lets you use a [third-party ad-blocking app](https://www.lifewire.com/hate-ads-block-safari-iphone-2000778), called a content blocker. <br>I'm not using Safari, but anyway this will not block in-app ads which are by far the most annoying ones. Think about the splash screen that you see sometimes for several seconds when you launch an app, or this video that will pop up once in a while. Not only is this annoying but it also slows down the apps.
 
 Is there anything you can do about that?
 
-Yes there is, and the solution relies on [Pi-hole](https://pi-hole.net/).
+Yes there is, and a simple solution is to use [Pi-hole](https://pi-hole.net/).
 
 <div class="center">
     <img src="/public/images/pi-hole-logo.svg" style="width: 30%; height: 30%">
@@ -48,32 +48,45 @@ Now let's say you tell your smartphone, or any device you use at home, to use th
 
 Well, you would kill all the ads, everywhere.
 
-This is precisely what Pi-hole is about. 
+This is precisely what Pi-hole is about.
 
-Pi-hole is a DNS server which comes with a builtin, and quite exhaustive, blacklist of domain names associated to advertising, tracking and analytics.
-The good thing with Pi-hole is that it's pretty lightweight and portable, and it can run on many different clients.
+Pi-hole is an [open source](https://github.com/pi-hole/pi-hole) [DNS sinkhole](https://en.wikipedia.org/wiki/DNS_sinkhole) which comes with a builtin, and quite exhaustive, blacklist of domain names associated to advertising, tracking and analytics.
+Even though the Raspberry Pi was at the center of the project at its beginning, which is why it's called **Pi**-hole, it can run on many different clients as it's pretty lightweight and portable.
 
-At the time I discovered Pi-hole, I had some DIY kit at home which included a [Raspberry Pi Zero](https://www.raspberrypi.org/products/raspberry-pi-zero/). This device is the smallest of its family, it's super cheap but one can struggle to find an interesting way to use it given its limited power.
+At the time I discovered Pi-hole, I had some DIY kit at home which included a [Raspberry Pi Zero](https://www.raspberrypi.org/products/raspberry-pi-zero/). This device is the smallest of its family, literally.
+
+// Insert Image of Pi Zero here
+// Caption: 
+
+It's also the cheapest one as it costs only 10$ ! Actually, the initial Rasperry Pi Zero was originally released at the price 5$, but this version did not include Wi-Fi and Bluetooth capabilities.
+
+On the other side, one can struggle to find an interesting way to use it given its limited power.
 
 Well, running Pi-hole on a Pi Zero proved to be one of the best use cases I could think of.
 I was initially concerned about performance but after several weeks relying on it, I can't see any performance decrease.
 
 The initial setup is simple: 
 - flash a Raspbian Stretch or Buster image on your Pi Zero
-- setup wifi and ssh access as usual
-- install Pi-hole with ``curl -sSL https://install.pi-hole.net | bash`` (you may have to insall ``curl`` beforehand)
+- install Pi-hole with ``curl -sSL https://install.pi-hole.net | bash``
 
-That's it, the Pi-hole DNS server is running on your Pi Zero. But now, you need to actually use this server instead of the standard DNS server your device is using. At this point you have to retrieve the local IP address of your Pi. Then you have multiple options, I will only mention two of them:
+That's it, the Pi-hole DNS server is running on your Pi Zero. But now you need to actually use this server instead of the standard DNS server your device is using. At this point you have to retrieve the local IP address of your Pi. Then you have multiple options, I will only mention two of them:
 
 - configure your router so that it uses the Pi Zero as its DNS server
-- do not change your router configuration, instead set manually the DNS server on your smartphone
+- do not change your router configuration, and instead manually set the DNS server on your smartphone
 
 The advantage of the first option is that you will benefit from Pi-hole as soon as you are connected to the network. That may or may not be what you want depending on the situation.
 The inconvenient is that, if for some reason you want to deactivate Pi-hole, you will have to change your router configuration.
 
-I went for the second option, and change the DNS used by my iPhone when connected to the WiFi. This way, I can quickly deactivate Pi-Hole just by turning off the WiFi on my phone and switch to Cellular.
-I choose this option because I anticipated that some apps or websites may not behave properly if they can't reach their ad / analytics server.<br>
-It turns out that I haven't had any such issue so far, but still I like the ability to switch off this DNS server.
+I went for the second option and change the DNS used by my iPhone when connected to the WiFi. This way, I can quickly deactivate Pi-Hole just by turning off the WiFi and switching to cellular.<br>
+I chose this option because I anticipated that some apps or websites may not behave properly if they can't reach their ad / analytics server.<br>
+It turns out I haven't had any such issue so far but still, I like the ability to switch off this DNS server.
+
+Now that you have setup the DNS server on your mobile, the ads are ... gone! No more ads anywhere on your mobile! Don't look for them, they aren't there anymore :)
+
+This feels good. I love how Jacob Salmela described this magical moment in [the original Pi-hole blogpost](https://web.archive.org/web/20200413111320/https://jacobsalmela.com/2015/06/16/block-millions-ads-network-wide-with-a-raspberry-pi-hole-2-0/):
+
+     It’s one of those things that is difficult to describe and more something you need to experience.
+
 
 An interesting feature of Pi-hole is the dashboard it provides. It shows stats on all the domains being queried on your network. That's a great tool to investigate your apps, and distinguish the bad guys from the good guys.
 
