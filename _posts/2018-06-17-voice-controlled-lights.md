@@ -58,19 +58,19 @@ The first thing you need is a set of 433MHz remote-controlled power sockets. We 
 
 The Raspberry Pi 3 will be the main component of this setup, it is a single-board computer which have enough power for our use case.
 
-<div id="images">
+<div id="images" class="center">
     <img src="/public/images/raspi3.png">
 </div>
 
 **Micro USB charger → 7€**
 
-<div id="images">
+<div id="images" class="center">
     <img src="/public/images/micro-usb-charger.png">
 </div>
 
 **Micro SD card 4Gb class 10 → 8€**
 
-<div id="images">
+<div id="images" class="center">
     <img src="/public/images/micro-sd.png">
 </div>
 
@@ -78,7 +78,7 @@ The Raspberry Pi 3 will be the main component of this setup, it is a single-boar
 
 Surprisingly, this microphone is [one of the best option](https://medium.com/snips-ai/benchmarking-microphone-arrays-respeaker-conexant-microsemi-acuedge-matrix-creator-minidsp-950de8876fda) for our use case.
 
-<div id="images">
+<div id="images" class="center">
     <img src="/public/images/ps3-eye.png">
     <div class="caption">PS3 Eye</div>
 </div>
@@ -87,7 +87,7 @@ Surprisingly, this microphone is [one of the best option](https://medium.com/sni
 
 We will need a 433MHz radio transmitter. You will find tons of models online (just type *"rf 433"* on Amazon), [the ones from kwmobile](https://www.amazon.com/kwmobile-transmitter-receiver-wireless-Raspberry/dp/B01H2D2RH6) seem to be often used in this kind of setup. Note that in most cases you will get both a transmitter and a receiver though we only need the transmitter here.
 
-<div id="images">
+<div id="images" class="center">
     <img src="/public/images/rf-433.png">
     <div class="caption">433MHz RF transmitter</div>
 </div>
@@ -104,13 +104,13 @@ Simple as ABC, just use one of the USB plugs of the Raspberry Pi.
 
 The radio transmitter has 3 pins: one power pin, one DATA pin and a Ground pin.
 
-<div id="images">
+<div id="images" class="center">
     <img src="/public/images/rf-433-pins.png">
 </div>
 
 The power pin can be plugged to the remaining 3v3 power pin on the Pi (pin number 1 in the pinout schema). We will use the pin number 13 (BCM 27) for DATA, and pin 14 for the ground. We plug the transmitter to the Raspberry Pi using the female/female cables.
 
-<div id="images">
+<div id="images" class="center">
     <img src="/public/images/rf-433-cables.png">
     <img src="/public/images/rpi3-rf-433.jpg">
 </div>
@@ -173,7 +173,7 @@ $ sudo ./chacon_send <wiringPI pin> <controller_code> <outlet_code> <on|off>
 
 - ``wiringPI pin``: this corresponds to the wiringPi pin number on which we plugged the DATA GPIO pin of the radio transmitter. We used the GPIO pin 13 which corresponds to the wiringPi number 2. If you used another pin, you can refer to the wiringPi mapping, or the table below, to get the corresponding number.
 
-<div id="images">
+<div id="images" class="center">
     <img src="/public/images/wiring-pi-mapping.png">
     <div class="caption">WiringPi mapping</div>
 </div>
