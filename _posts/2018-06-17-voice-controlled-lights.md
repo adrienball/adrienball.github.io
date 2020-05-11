@@ -3,12 +3,6 @@ title: Voice controlled lights with a Raspberry Pi and Snips
 layout: post
 ---
 
-<!-- You can extract all of the variables in use from a Smarty template using a simple call to `*nix` grep with a trivial regex expression. Here is the command-
-
-{% highlight bash %}
-grep -o "\{\$[-_a-zA-Z0-9]*\}" my-template.tpl
-{% endhighlight %} -->
-
 The objective of this article is to provide a step-by-step tutorial on how to setup a voice controlled light that you can interact with using trigger words.
 
 This is what you will have at the end of this tutorial:
