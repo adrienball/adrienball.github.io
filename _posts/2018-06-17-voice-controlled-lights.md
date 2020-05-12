@@ -1,6 +1,7 @@
 ---
 title: Voice controlled lights with a Raspberry Pi and Snips
 layout: post
+image: rpi3-rf-433.jpg
 ---
 
 The objective of this article is to provide a step-by-step tutorial on how to setup a voice controlled light that you can interact with using trigger words.
