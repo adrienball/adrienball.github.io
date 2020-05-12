@@ -13,7 +13,7 @@
   {% if page.excerpt %}
     <meta name="twitter:description" content="{{ page.excerpt }}">
   {% else %}
-    <meta name="twitter:description" content="{{ page.content | strip_html | xml_escape | truncate: 200 }}">
+    <meta name="twitter:description" content="{{ site.description }}">
   {% endif %}
 
   {% if page.image %}
