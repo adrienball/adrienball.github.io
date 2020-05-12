@@ -96,7 +96,7 @@ An interesting feature of Pi-hole is the dashboard it provides. It shows stats o
     <div class="caption">DNS queries over time</div>
 </div>
 
-Remember that all this is powered by this 65mm long tiny device. Isn't it wonderful ?
+Remember that all this is powered by this 65mm long device. Isn't it wonderful ?
 
 Happy hacking!
 
