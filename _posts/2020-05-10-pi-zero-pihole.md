@@ -29,7 +29,7 @@ Is there anything you can do about that?
 Yes there is, and a simple solution is to use [Pi-hole](https://pi-hole.net/).
 
 <div class="center">
-    <img src="/public/images/pi-hole-logo.svg" style="width: 30%; height: 30%">
+    <img src="/assets/images/pi-hole-logo.svg" style="width: 30%; height: 30%">
 </div>
 
 ## Pi-hole
@@ -51,7 +51,7 @@ Even though the Raspberry Pi was at the center of the project at its beginning, 
 At the time I discovered Pi-hole, I had some DIY kit at home which included a [Raspberry Pi Zero](https://www.raspberrypi.org/products/raspberry-pi-zero/). This device is the smallest of its family, literally.
 
 <div id="images">
-    <img src="/public/images/pi-zero.jpg">
+    <img src="/assets/images/pi-zero.jpg">
     <div class="caption">The tiny Raspberry Pi Zero</div>
 </div>
 
@@ -87,11 +87,11 @@ This feels good. I love how Jacob Salmela described this magical moment in [the 
 An interesting feature of Pi-hole is the dashboard it provides. It shows stats on all the domains being queried on your network. That's a great tool to investigate your apps, and distinguish the bad guys from the good guys.
 
 <div id="images">
-    <img src="/public/images/pi-hole-query-logs.png">
+    <img src="/assets/images/pi-hole-query-logs.png">
     <div class="caption">DNS query logs</div>
 </div>
 <div id="images">
-    <img src="/public/images/pi-hole-history-chart.png">
+    <img src="/assets/images/pi-hole-history-chart.png">
     <div class="caption">DNS queries over time</div>
 </div>
 
