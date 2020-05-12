@@ -6,6 +6,25 @@
   <!-- Enable responsiveness on mobile devices-->
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
 
+  <!--- Enable Twitter cards -->
+  <meta name="twitter:site" content="@{{ site.twitter_username }}">
+  <meta name="twitter:title" content="{{ page.title }}">
+
+  {% if page.excerpt %}
+    <meta name="twitter:description" content="{{ page.excerpt }}">
+  {% else %}
+    <meta name="twitter:description" content="{{ page.content | strip_html | xml_escape | truncate: 200 }}">
+  {% endif %}
+
+  {% if page.image %}
+    <meta name="twitter:card"  content="summary_large_image">
+    <meta name="twitter:image" content="{{ site.url_img }}/{{ page.image }}">
+  {% else %}
+    <meta name="twitter:card"  content="summary">
+    <meta name="twitter:image" content="{{ site.url_img }}/{{ site.title_image }}">
+  {% endif %}
+  <!-- end of Twitter cards -->
+
   <title>
     {% if page.title == "Home" %}
       {{ site.title }} &middot; {{ site.tagline }}
