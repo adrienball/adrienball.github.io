@@ -6,5 +6,9 @@
 }
 
 .footnotes {
-	font-size: 14px
+  font-size: 14px
+}
+
+.projects .td1 {
+  width: 20%;
 }

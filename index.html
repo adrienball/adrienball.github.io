@@ -9,7 +9,7 @@ title: Home
 <table class="projects">
   {% for project in site.data.projects %}
   <tr>
-    <td>
+    <td class="td1">
         {% if project.url %}
         <a href="{{ project.url }}">{{ project.name }}</a>
         {% else %}
@@ -17,14 +17,8 @@ title: Home
         {% endif %}
     </td>
     <td>
-        {{ project.description }}
-        <br/>
-        {% if project.github != '' %}
+        {{ project.description }}<br/>
         <a class="openSourceLink" href="{{ project.github }}"><i class="fab fa-github"></i> Github</a>
-        {% endif %}
-        {% if project.packagist %}
-        <a class="openSourceLink" href="{{ project.packagist }}"><i class="fas fa-elephant"></i> Packagist</a>
-        {% endif %}
     </td>
   </tr>
   {% endfor %}
