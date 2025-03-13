@@ -1,4 +1,9 @@
-- title: "Snips voice platform: an embedded spoken language understanding system for private-by-design voice interfaces"
+- title: "Spoken Language Understanding on the Edge, 5th Workshop on Energy Efficient Machine Learning and Cognitive Computing, NeurIPS, December 2019"
+  url: https://arxiv.org/abs/1810.12735
+  description: ""
+  date: "2019-10-02"
+
+- title: "Snips Voice Platform: an embedded Spoken Language Understanding system for private-by-design voice interfaces, Workshop on Privacy in Machine Learning and Artificial Intelligence, ICML, July 2018"
   url: https://arxiv.org/abs/1805.10190
   description: This paper presents the machine learning architecture of the Snips Voice Platform, a software solution to perform Spoken Language Understanding on microprocessors typical of IoT devices.
   date: "2018-05-25"
